@@ -18,7 +18,7 @@ h1 {
 }
 h2 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
   color: #3c5f63;
   line-height: 1.5em;
 }
@@ -45,6 +45,10 @@ div#avatar-container {
   margin: 30px auto;
   text-align: center;
 }
+div#avatar-container img#avatar {
+  margin: 0 auto;
+  max-width: 70%;
+}
 div#lets-talk {
   margin-top: 30px;
 }
@@ -57,4 +61,17 @@ p#i-love-to-do {
   font-weight: 300;
   font-size: 17px;
   line-height: 1.7em;
+}
+ul#external-links li.external-link {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+ul#external-links li.external-link .fa {
+  margin-right: 5px;
+}
+footer {
+  margin-top: 25px;
+  background-color: #eee;
+  text-align: center;
+  padding: 30px;
 }

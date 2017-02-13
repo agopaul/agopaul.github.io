@@ -19,8 +19,8 @@ h1 {
 
 h2 {
 	font-weight: 700;
-    font-size: 30px;
-    color: #3c5f63;
+	font-size: 40px;
+	color: #3c5f63;
 	line-height: 1.5em;
 }
 h4 {
@@ -28,7 +28,7 @@ h4 {
 }
 h5 {
 	font-weight: bold;
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 
 	span {
 		border-bottom: 4px #50cca8 solid;
@@ -42,15 +42,17 @@ span.underlined {
 
 p.paragraph {
 	margin-bottom: 25px;
-    background-color: #ecf5f2;
-    padding: 12px;
+	background-color: #ecf5f2;
+	padding: 12px;
 }
 
 div#avatar-container {
 	margin: 30px auto;
 	text-align: center;
-	img#avatar {
 
+	img#avatar {
+		margin: 0 auto;
+		max-width: 70%;
 	}
 }
 
@@ -63,9 +65,27 @@ div#lets-talk {
 }
 
 p#i-love-to-do {
-    color: #98a3b1;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 1.7em;
+	color: #98a3b1;
+	font-style: italic;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 1.7em;
+}
+
+ul#external-links {
+	li.external-link {
+		font-size: 17px;
+		margin-bottom: 7px;
+
+		.fa {
+			margin-right: 5px;
+		}
+	}
+}
+
+footer {
+	margin-top: 25px;
+	background-color: #eee;
+	text-align: center;
+	padding: 30px;
 }
