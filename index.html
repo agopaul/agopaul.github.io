@@ -1,143 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Paolo Agostinetto - Full stack web developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paolo Agostinetto - Co-founder at Redokun</title>
 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	<script src="https://use.fontawesome.com/f4838bcf4a.js"></script>
+    <!-- Google Fonts - Press Start 2P for 8-bit style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body class="overflow-hidden">
+    <!-- Space Background -->
+    <div id="space-bg" class="fixed inset-0 -z-10"></div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-3">
-			<h1>Paolo Agostinetto</h1>
+    <!-- Stars Layer -->
+    <div id="stars" class="fixed inset-0 -z-10"></div>
 
-			<div id="avatar-container">
-				<img src="img/avt3-small-square.png" alt="Avatar" id="avatar" class="img-responsive">
-			</div>
+    <!-- Shooting Stars -->
+    <div id="shooting-stars" class="fixed inset-0 -z-10"></div>
 
-			<p id="i-love-to-do">
-				I love to tackle technical challenges while looking for the best solution in terms of the amount of effort, maintainability, and scalability
-			</p>
+    <!-- Planets -->
+    <div id="planet-1" class="planet"></div>
+    <div id="planet-2" class="planet"></div>
+    <div id="spaceship" class="spaceship"></div>
 
-			<div id="lets-talk">
-				<span class="title">
-					Let's talk
-				</span>
-				<br>
-				<span class="underlined">
-					paoloagostinetto (@gmail.com)
-				</span>
-			</div>
-		</div>
-		<div class="col-md-8 col-md-push-1">
+    <!-- Main Content -->
+    <div class="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div class="content-container max-w-3xl w-full">
+            <!-- Header -->
+            <div class="text-center mb-8 glitch-container">
+                <h1 class="pixel-text text-4xl md:text-6xl mb-4 text-cyan-400 glow-text">
+                    PAOLO AGOSTINETTO
+                </h1>
+                <div class="scanline"></div>
+            </div>
 
-			<h2>
-				I’m a <span class="underlined">full-stack web developer</span> living in Treviso, Italy. I make web applications, usually in PHP
-			</h2>
+            <!-- Main Info Card -->
+            <div class="pixel-card bg-black bg-opacity-80 border-4 border-cyan-400 p-8 mb-6 glow-border">
+                <div class="mb-6">
+                    <p class="text-xl md:text-2xl text-green-400 pixel-text">
+                        &gt; CO-FOUNDER @ REDOKUN
+                    </p>
+                </div>
+            </div>
 
-			<h4>
-				Technologies that I currently use or have used
-			</h4>
+            <!-- Projects Section -->
+            <div class="pixel-card bg-black bg-opacity-80 border-4 border-yellow-500 p-6 mb-6 glow-border-yellow">
+                <p class="pixel-text text-yellow-400 mb-4 text-sm">&gt; SIDE PROJECTS</p>
+                <div class="mb-4">
+                    <h3 class="pixel-text text-cyan-300 text-sm mb-3">MAILSNIPER</h3>
+                    <p class="space-mono-text text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+                        Instantly identify disposable emails, non-work addresses, temporary domains, and suspicious accounts
+                        to protect your platform from abuse and improve user quality.
+                    </p>
+                    <a href="https://mailsniperapp.com" target="_blank" class="pixel-button inline-block">
+                        VISIT MAILSNIPER
+                    </a>
+                </div>
+            </div>
 
-			<h5>
-				<span>
-					Backend development
-				</span>
-			</h5>
+            <!-- Links Section -->
+            <div class="pixel-card bg-black bg-opacity-80 border-4 border-purple-500 p-6 glow-border-purple">
+                <p class="pixel-text text-purple-400 mb-4 text-sm">&gt; CONNECT</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="https://github.com/agopaul" target="_blank" class="pixel-button">
+                        GITHUB
+                    </a>
+                    <a href="https://www.linkedin.com/in/paoloagostinetto/" target="_blank" class="pixel-button">
+                        LINKEDIN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<p class="paragraph">
-				PHP OOP
-				<br>
-				Zend Framework, Symfony, Doctrine, PHPUnit
-				<br>
-				PostgreSql, MySQL, MS SQL Server, Redis, Memcached
-				<br>
-				Gearman, beanstalkd
-				<br>
-				Ruby on Rails 3/4
-			</p>
+    <script>
+        // Generate random stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 200;
 
-			<h5>
-				<span>
-					Frontend development
-				</span>
-			</h5>
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                starsContainer.appendChild(star);
+            }
+        }
 
-			<p class="paragraph">
-				Less, CSS3, Bootstrap, SVG, WebGL
-				<br>
-				React, Typescript, webpack, babel, karmajs, mocha, chai, undersore, handlebars, three.js
-			</p>
+        // Generate shooting stars
+        function createShootingStars() {
+            const container = document.getElementById('shooting-stars');
 
-			<h5>
-				<span>
-					Others
-				</span>
-			</h5>
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    const shootingStar = document.createElement('div');
+                    shootingStar.className = 'shooting-star';
+                    shootingStar.style.left = Math.random() * 100 + '%';
+                    shootingStar.style.top = Math.random() * 50 + '%';
+                    container.appendChild(shootingStar);
 
-			<p class="paragraph">
-				<b>SCM:</b> mercurial (hg), git
-				<br>
-				<b>Sysop:</b> ansible, chef, Amazon AWS
-			</p>
+                    setTimeout(() => {
+                        shootingStar.remove();
+                    }, 2000);
+                }
+            }, 2000);
+        }
 
-			<h5>
-				<span>
-					My specialties
-				</span>
-			</h5>
+        // Initialize
+        createStars();
+        createShootingStars();
 
-			<p class="paragraph">
-				Software architecture, advanced integrations, code/SQL optimization
-			</p>
+        // Parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
 
-			<h4>
-				Links
-			</h4>
-
-			<ul id="external-links" class="list-unstyled">
-				<li class="external-link">
-					<a href="https://medium.com/@paoloagostinetto" target="_blank">
-						<i class="fa fa-medium" aria-hidden="true"></i>
-						Medium
-					</a>
-				</li>
-				<li class="external-link">
-					<a href="https://github.com/agopaul" target="_blank">
-						<i class="fa fa-github" aria-hidden="true"></i>
-						Github
-					</a>
-				</li>
-				<li class="external-link">
-					<a href="http://stackoverflow.com/users/391397/paul-ago" target="_blank">
-						<i class="fa fa-stack-overflow" aria-hidden="true"></i>
-						StackOverflow
-					</a>
-				</li>
-				<li class="external-link">
-					<a href="https://www.linkedin.com/in/paoloagostinetto/" target="_blank">
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-						Linkedin
-					</a>
-				</li>
-			</ul>
-
-		</div>
-	</div>
-</div>
-
-<footer>
-	Paolo Agostinetto, 2017
-</footer>
-
+            document.getElementById('planet-1').style.transform =
+                `translate(${moveX}px, ${moveY}px)`;
+            document.getElementById('planet-2').style.transform =
+                `translate(${moveX * -1.5}px, ${moveY * -1.5}px)`;
+        });
+    </script>
 </body>
 </html>
