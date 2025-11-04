@@ -253,6 +253,12 @@
         inset 0 0 20px rgba(168, 85, 247, 0.1);
 }
 
+.glow-border-yellow {
+    box-shadow:
+        0 0 20px rgba(250, 204, 21, 0.5),
+        inset 0 0 20px rgba(250, 204, 21, 0.1);
+}
+
 /* Pixel Buttons */
 .pixel-button {
     display: inline-block;
