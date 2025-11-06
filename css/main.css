@@ -360,6 +360,13 @@
         line-height: 1.8;
     }
 
+    h1.pixel-text {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
     .pixel-button {
         font-size: 8px;
         padding: 10px 16px;
